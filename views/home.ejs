@@ -1,0 +1,18 @@
+<h1>Hello World</h1>
+<h1><%= user.name %></h1>
+
+<button id="signoutBtn">Signout</button>
+
+<script>
+  const signoutbtn = document
+    .getElementById("signoutBtn")
+    .addEventListener("click", () => SignoutHandler());
+  function SignoutHandler() {
+    const conf = confirm("You sure you want to signout ?? ");
+    if (conf) {
+      location.href = "/logout";
+    } else {
+      location.reload();
+    }
+  }
+</script>
